@@ -1,0 +1,98 @@
+﻿.productCard {
+    border: 1px solid #E0E0E0;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    padding: 0 15px;
+    position: relative;
+}
+
+.productName {
+    color: #333;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+.productManufacturer {
+    color: #555;
+    font-size: 0.8125em;
+    line-height: 1.8em;
+    margin-bottom: 10px;
+}
+
+.productImage img {
+    max-width: calc(100% + 30px);
+    margin-left: -15px;
+    margin-right: -15px;
+    height: auto;
+}
+
+.productActions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.productPrice {
+    font-size: 1em;
+    color: #000;
+}
+
+.productReducedFromPrice {
+    text-decoration: line-through;
+    margin-right: 8%;
+    color: #888;
+}
+
+.saleBadge {
+    position: absolute;
+    top: 16px;
+    overflow: hidden;
+    height: 38px;
+    min-width: 70px;
+    text-align: left;
+    z-index: 0;
+    display: inline-block;
+    -webkit-transform: rotate( -90deg );
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+
+.saleLabel {
+    font-size: 0.85em;
+    color: #FFF;
+    background: #E92546;
+    text-transform: uppercase;
+    padding: 9px;
+    text-align: center;
+    display: block;
+    min-width: 70px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+::deep .addToCard {
+    color: #000;
+    font-size: 0.8125em;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+::deep .addToCard :hover {
+    color: #FFAF02;
+}
+
+::deep .readMore {
+    color: #000;
+    font-size: 0.8125em;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+::deep .readMore :hover {
+    color: #E92546;
+}

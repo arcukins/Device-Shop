@@ -1,0 +1,39 @@
+﻿@page "/productListing";
+@using Microsoft.AspNetCore.Authorization
+@using WebApplication1.Shared.Models;
+@using WebApplication1.Client.Components;
+@using Microsoft.AspNetCore.Components.WebAssembly.Authentication
+@attribute [Authorize]
+@inject HttpClient Http
+
+<h3>Index</h3>
+
+@if (products == null)
+{
+    <p><em>Loading...</em></p>
+    return;
+}
+
+<div class="productListing">
+    @for (int i = 0; i < products.Count(); i++)
+    {
+        <ProductCard @bind-Product="@products[i]" />
+    }
+</div>
+
+
+@code {
+    private Product[] products;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            products = await Http.GetFromJsonAsync<Product[]>("api/Product/GetAll");
+        }
+        catch (AccessTokenNotAvailableException exception)
+        {
+            exception.Redirect();
+        }
+    }
+}
