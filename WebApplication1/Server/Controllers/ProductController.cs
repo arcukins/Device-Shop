@@ -29,5 +29,12 @@ namespace WebApplication1.Server.Controllers
 		{
 			return this._productService.GetAll().ToArray();
 		}
+
+		[Route("{uniqueName}")]
+		[HttpGet]
+		public Product GetProduct(string uniqueName)
+		{
+			return this._productService.GetProductByUniqueName(uniqueName);
+		}
 	}
 }

@@ -1,0 +1,80 @@
+﻿@page "/product/{UniqueName}";
+@using Microsoft.AspNetCore.Authorization
+@using WebApplication1.Shared.Models;
+@using Microsoft.AspNetCore.Components.WebAssembly.Authentication
+@attribute [Authorize]
+@inject HttpClient Http
+
+@if (this.product == null)
+{
+    <p><em>Loading...</em></p>
+    return;
+}
+
+<div class="productDescriptionBlock">
+    <div class="productDetails">
+        <div class="productImage">
+            <img src="@this.product.ImageUrl" />
+        </div>
+
+        <div class="nameDescriptionBlock">
+            <h3>@this.product.Name</h3>
+            <p>@this.product.Description</p>
+        </div>
+
+        <div class="productActions">
+            <div>
+                <span class="price">$@this.product.Price</span>
+                @if(this.hasDiscount)
+		        {
+                    <span class="discountPrice">$@this.product.OriginalPrice</span>
+		        }
+                
+            </div>
+            <span class="qty">QUANTITY:</span>
+            <select class="qtySelect">
+                @for (int i = 0; i < this.quantityOptions.Count(); i++)
+                {
+                    <option>@this.quantityOptions[i]</option>
+                }
+            </select>
+            <button type="submit" class="addToCart">
+                <span>Add to cart</span>
+            </button>
+        </div>
+    </div>
+</div>
+<div class="desc">
+    <h4>DESCRIPTION</h4>
+    <p>@this.product.Description</p>
+</div>
+
+@code {
+    [Parameter]
+    public string UniqueName { get; set; }
+
+    private Product product { get; set; }
+
+    private List<int> quantityOptions = new List<int>();
+
+    private bool hasDiscount;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            product = await Http.GetFromJsonAsync<Product>($"api/Product/{UniqueName}");
+
+            quantityOptions.AddRange(
+                product.Quantity > 10
+                ? Enumerable.Range(1, 10)
+                : Enumerable.Range(1, product.Quantity));
+
+            this.hasDiscount = this.product?.OriginalPrice - this.product?.Price > 0;
+        }
+        catch (AccessTokenNotAvailableException exception)
+        {
+            exception.Redirect();
+        }
+    }
+}

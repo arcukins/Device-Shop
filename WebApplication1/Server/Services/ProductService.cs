@@ -9,9 +9,15 @@ namespace WebApplication1.Server.Services
 			: base(dataContext)
 		{
 		}
+
+		public Product GetProductByUniqueName(string uniqueName)
+		{
+			return this.Get(product => product.UniqueName == uniqueName);
+		}
 	}
 
 	public interface IProductService : IService<Product>
 	{
+		Product GetProductByUniqueName(string uniqueName);
 	}
 }
