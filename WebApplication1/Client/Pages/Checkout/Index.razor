@@ -1,0 +1,25 @@
+﻿@page "/checkout"
+@using WebApplication1.Shared.State
+@using WebApplication1.Client.Components.Checkout
+@using WebApplication1.Client.Services
+@inject StateContainer state
+@inject IBasketService basketService
+
+<div class="checkout">
+    <div class="product-listing">
+        <ProductList />
+        <Total />
+    </div>
+    <div class="payment">
+        <Payment />
+    </div>
+</div>
+
+@code {
+
+    protected override async Task OnInitializedAsync()
+    {
+        state.OnChange += StateHasChanged;
+        state.Basket = await basketService.GetBasket();
+    }
+}

@@ -1,0 +1,12 @@
+﻿.checkout {
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-listing {
+    width: 49%;
+}
+
+.payment {
+    width: 49%;
+}

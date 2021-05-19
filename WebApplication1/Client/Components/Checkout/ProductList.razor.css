@@ -1,0 +1,13 @@
+﻿.checkout-item img {
+    width: 20%;
+    height: auto;
+}
+
+.checkout-item {
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border-bottom: 1px solid black;
+}

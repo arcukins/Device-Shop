@@ -1,13 +1,11 @@
-using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using WebApplication1.Server.Data;
-using WebApplication1.Server.Models;
-using WebApplication1.Server.Services;
+using WebApplication1.Ecom.Extensions;
+using WebApplication1.Data.Extensions;
+using WebApplication1.Shared.State;
 
 namespace WebApplication1.Server
 {
@@ -24,32 +22,13 @@ namespace WebApplication1.Server
 		// For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
 		public void ConfigureServices(IServiceCollection services)
 		{
-			services.AddDbContext<ApplicationDbContext>(options =>
-				options.UseSqlServer(
-					Configuration.GetConnectionString("DefaultConnection")));
+			services.AddDatabase();
+			services.AddEcom();
+			services.AddScoped<StateContainer>();
 
-			services.AddDatabaseDeveloperPageExceptionFilter();
-
-			services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
-				.AddEntityFrameworkStores<ApplicationDbContext>();
-
-			services.AddIdentityServer()
-				.AddApiAuthorization<ApplicationUser, ApplicationDbContext>();
-
-			services.AddAuthentication()
-				.AddIdentityServerJwt();
-
-			AddDependencies(services);
 
 			services.AddControllersWithViews();
 			services.AddRazorPages();
-		}
-
-		public void AddDependencies(IServiceCollection services)
-		{
-			services.AddScoped<IApplicationDbContext, ApplicationDbContext>();
-			services.AddScoped<IProductService, ProductService>();
-			services.AddScoped<ICategoryService, CategoryService>();
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

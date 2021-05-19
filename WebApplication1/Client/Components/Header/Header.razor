@@ -1,0 +1,75 @@
+﻿@using Microsoft.AspNetCore.Components.Authorization
+@using Microsoft.AspNetCore.Components.WebAssembly.Authentication
+@using WebApplication1.Shared.State
+
+@inject NavigationManager Navigation
+@inject SignOutSessionStateManager SignOutManager
+@inject StateContainer state
+@implements IDisposable
+
+<AuthorizeView>
+    <Authorized>
+        <div class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="header-left">
+                            <div class="logo">
+                                <a href=""><img src="images/logo.png" alt="" /></a>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="header_right">
+                            <ul class="icon1 sub-icon1 profile_img">
+                                <li>
+                                    <a class="active-icon c1" href="#"> </a>
+                                    <ul class="sub-icon1 list">
+                                        <a class="userName" href="authentication/profile">Hello, @context.User.Identity.Name!</a>
+                                        <div class="clear"></div>
+                                        <ProductCart />
+                                        <div class="login_buttons">
+                                            <div class="check_button @(!hasProductsInBasket ? "disabled" : "")">
+                                                <NavLink class="readMore" href="checkout">
+                                                    <span>Check out</span>
+                                                </NavLink></div>
+                                            <div class="login_button">
+                                                <a class="login_button" @onclick="BeginSignOut">Log out</a>
+                                            </div>
+                                            <div class="clear"></div>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </Authorized>
+</AuthorizeView>
+
+@code {
+    private async Task BeginSignOut(MouseEventArgs args)
+    {
+        await SignOutManager.SetSignOutState();
+        Navigation.NavigateTo("authentication/logout");
+    }
+
+    private bool hasProductsInBasket;
+
+    protected override void OnInitialized()
+    {
+        state.OnChange += StateHasChanged;
+
+        hasProductsInBasket = state.Basket?.Products?.Count > 0;
+
+        Console.WriteLine(hasProductsInBasket);
+    }
+
+    public void Dispose()
+    {
+        state.OnChange -= StateHasChanged;
+    }
+}

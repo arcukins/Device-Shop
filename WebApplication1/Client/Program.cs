@@ -8,6 +8,8 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using WebApplication1.Client.Services;
+using WebApplication1.Shared.State;
 
 namespace WebApplication1.Client
 {
@@ -16,6 +18,9 @@ namespace WebApplication1.Client
 		public static async Task Main(string[] args)
 		{
 			var builder = WebAssemblyHostBuilder.CreateDefault(args);
+			//State singleton
+			builder.Services.AddSingleton<StateContainer>();
+
 			builder.RootComponents.Add<App>("#app");
 
 			builder.Services.AddHttpClient("WebApplication1.ServerAPI", client => client.BaseAddress = new Uri(builder.HostEnvironment.BaseAddress))
@@ -25,6 +30,9 @@ namespace WebApplication1.Client
 			builder.Services.AddScoped(sp => sp.GetRequiredService<IHttpClientFactory>().CreateClient("WebApplication1.ServerAPI"));
 
 			builder.Services.AddApiAuthorization();
+
+			//Services
+			builder.Services.AddScoped<IBasketService, BasketService>();
 
 			await builder.Build().RunAsync();
 		}

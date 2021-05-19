@@ -1,0 +1,24 @@
+﻿@using WebApplication1.Shared.Models;
+@using WebApplication1.Shared.State;
+@inject StateContainer state
+@implements IDisposable
+
+<div class="total">
+    <h4>Total:</h4>
+    <span>@this.totalPrice</span>
+</div>
+
+@code {
+    private double? totalPrice;
+
+    protected override void OnInitialized()
+    {
+        state.OnChange += StateHasChanged;
+        this.totalPrice = state?.Basket?.Products.Select(a => a.Product.Price).Sum();
+    }
+
+    public void Dispose()
+    {
+        state.OnChange -= StateHasChanged;
+    }
+}

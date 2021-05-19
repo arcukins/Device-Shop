@@ -1,0 +1,59 @@
+﻿@using WebApplication1.Client.Services
+@using WebApplication1.Shared.State
+@using WebApplication1.Shared.Models
+@inject StateContainer state
+@inject IBasketService basketService
+@implements IDisposable 
+
+@if (basketItems != null && basketItems.Count != 0)
+{
+    @for (int i = 0; i < basketItems.Count; i++)
+    {
+    <li>
+        <div class="list_img">
+            <img src="@basketItems[i].Product.ImageUrl" alt="" />
+        </div>
+        <div class="list_desc">
+            <h4><a href="#">@basketItems[i].Product.Name</a></h4><span class="actual">
+        @basketItems[i].Quantity x
+        $@basketItems[i].Product.Price
+    </span>
+        </div>
+    </li>
+    }
+} else
+{
+    <div></div>
+}
+
+@code {
+    private IList<BasketItem> basketItems;
+
+    protected override void OnInitialized()
+    {
+        state.OnChange += StateHasChanged;
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            Basket basket = await basketService.GetBasket();
+
+            state.Basket = basket;
+
+            this.basketItems = state.Basket.Products;
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e.Message);
+        }
+
+        //Console.WriteLine(state.Basket.Id);
+    }
+
+    public void Dispose()
+    {
+        state.OnChange -= StateHasChanged;
+    }
+}

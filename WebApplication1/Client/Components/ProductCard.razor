@@ -1,12 +1,17 @@
-﻿@using WebApplication1.Shared.Models;
+﻿@using WebApplication1.Shared.Models
+@using WebApplication1.Shared.ViewModels
+@using WebApplication1.Client.Services
+@using WebApplication1.Shared.State 
+@inject IBasketService basketService
+@inject StateContainer state
 
 <div class="productCard">
-    @if(this.HasDiscount)
-	{
+    @if (this.HasDiscount)
+    {
         <div class="saleBadge">
             <span class="saleLabel">SALE</span>
         </div>
-	}
+    }
     <div class="productImage">
         <img src="@this.Product.ImageUrl" />
     </div>
@@ -17,18 +22,18 @@
         <div class="productManufacturer">@this.Product.Manufacturer</div>
     </div>
     <div class="d-flex">
-        @if(HasDiscount)
-		{
+        @if (HasDiscount)
+        {
             <div class="productReducedFromPrice">$ @this.Product.OriginalPrice</div>
-		}
-        
+        }
+
         <div class="productPrice">$ @this.Product.Price</div>
     </div>
-    
+
     <div class="productActions">
-        <NavLink class="addToCard" href="counter">
-            <span>Add to cart</span>
-        </NavLink>
+        <button @onclick="AddToCart" class="addToCard" href="counter">
+            <span>@(!this.productIsInCart ? "Add to cart" : "To Checkout")</span>
+        </button>
         <NavLink class="readMore" href="@this.ProductUrl">
             <span>Read More</span>
         </NavLink>
@@ -46,10 +51,36 @@
 
     private string ProductUrl;
 
+    private bool productIsInCart;
+
     protected override void OnInitialized()
     {
+        state.OnChange += StateHasChanged;
+
+        Task.Delay(3000);
+
         this.HasDiscount = Product?.OriginalPrice - Product?.Price > 0;
 
         this.ProductUrl = $"product/{Product.UniqueName}";
+
+        this.productIsInCart = state?.Basket?.Products.Any(p => p.Id == this.Product.Id) ?? false;
+    }
+
+    private async void AddToCart()
+    {
+        if (productIsInCart)
+        {
+            return;
+        }
+
+        var product = new AddToCart
+        {
+            ProductID = this.Product.Id,
+            Quantity = 1
+        };
+
+        state.Basket = await basketService.AddToCart(product);
+
+        Console.WriteLine("added");
     }
 }

@@ -1,0 +1,51 @@
+﻿@using WebApplication1.Shared.Models;
+@using WebApplication1.Shared.State;
+@using WebApplication1.Client.Services;
+@inject StateContainer state
+@inject IBasketService basketService
+@inject NavigationManager NavManager
+@implements IDisposable
+
+<form>
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="email" class="form-control" id="name" placeholder="Enter your name">
+    </div>
+    <div class="form-group">
+        <label for="lastName">Last name</label>
+        <input type="email" class="form-control" id="lastName" placeholder="Enter your last name">
+    </div>
+    <div class="form-group">
+        <label for="city">City</label>
+        <input type="email" class="form-control" id="city" placeholder="Enter city">
+    </div>
+    <div class="form-group">
+        <label for="street">Street</label>
+        <input type="email" class="form-control" id="street" placeholder="Enter street">
+    </div>
+    <div class="form-group">
+        <label for="postalCode">Postal code</label>
+        <input type="email" class="form-control" id="postalCode" placeholder="Enter postal code">
+    </div>
+
+    <button type="submit" class="btn btn-danger" @onclick="purchase">BUY ME!!</button>
+</form>
+
+@code {
+    protected override void OnInitialized()
+    {
+        state.OnChange += StateHasChanged;
+    }
+
+    private async Task purchase()
+    {
+        var basket = await basketService.Purchase();
+        state.Basket = basket;
+        NavManager.NavigateTo("/checkout/confirm");
+    }
+
+    public void Dispose()
+    {
+        state.OnChange -= StateHasChanged;
+    }
+}

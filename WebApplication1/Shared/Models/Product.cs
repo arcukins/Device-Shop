@@ -19,9 +19,5 @@
 		public double Price { get; set; }
 
 		public double OriginalPrice { get; set; }
-
-		public int CategoryId { get; set; }
-
-		public Category Category { get; set; }
 	}
 }

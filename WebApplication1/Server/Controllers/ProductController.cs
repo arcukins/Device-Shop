@@ -1,9 +1,8 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Linq;
-using WebApplication1.Server.Models;
-using WebApplication1.Server.Services;
+using WebApplication1.Data.Models;
+using WebApplication1.Data.Repositories;
 
 namespace WebApplication1.Server.Controllers
 {
@@ -11,9 +10,9 @@ namespace WebApplication1.Server.Controllers
 	[Route("api/[controller]")]
 	public class ProductController : ControllerBase
 	{
-		private readonly IProductService _productService;
+		private readonly IProductRepository _productService;
 
-		public ProductController(IProductService productService)
+		public ProductController(IProductRepository productService)
 		{
 			this._productService = productService;
 		}

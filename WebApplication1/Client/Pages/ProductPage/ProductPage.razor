@@ -2,8 +2,13 @@
 @using Microsoft.AspNetCore.Authorization
 @using WebApplication1.Shared.Models;
 @using Microsoft.AspNetCore.Components.WebAssembly.Authentication
+@using WebApplication1.Client.Services
+@using WebApplication1.Shared.State
+@using WebApplication1.Shared.ViewModels
 @attribute [Authorize]
 @inject HttpClient Http
+@inject IBasketService basketService
+@inject StateContainer state
 
 @if (this.product == null)
 {
@@ -25,11 +30,11 @@
         <div class="productActions">
             <div>
                 <span class="price">$@this.product.Price</span>
-                @if(this.hasDiscount)
-		        {
+                @if (this.hasDiscount)
+                {
                     <span class="discountPrice">$@this.product.OriginalPrice</span>
-		        }
-                
+                }
+
             </div>
             <span class="qty">QUANTITY:</span>
             <select class="qtySelect">
@@ -76,5 +81,19 @@
         {
             exception.Redirect();
         }
+    }
+
+    private async void AddToCart()
+    {
+
+        var product = new AddToCart
+        {
+            ProductID = this.product.Id,
+            Quantity = 1
+        };
+
+        state.Basket = await basketService.AddToCart(product);
+
+        Console.WriteLine("added");
     }
 }

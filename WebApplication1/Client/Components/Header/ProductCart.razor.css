@@ -1,0 +1,33 @@
+﻿li {
+    display: flex;
+    list-style: none;
+    border-bottom: 1px solid black;
+}
+.list_img {
+    width: 26%;
+}
+
+.list_img img {
+    width: 100%;
+}
+
+.list_desc {
+    float: left;
+    width: 50%;
+}
+
+.list_desc h4 a {
+    color: #000;
+    font-size: 0.6em;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.list_desc h4 a:hover {
+    color: red;
+}
+
+h4 {
+    margin: 0;
+    line-height: 0.5
+}

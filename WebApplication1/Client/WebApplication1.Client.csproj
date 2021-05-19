@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+﻿<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
@@ -9,12 +9,33 @@
   </ItemGroup>
     
   <ItemGroup>
+    <None Remove="Components\Checkout\ProductList.razor.css" />
+    <None Remove="Components\Checkout\Total.razor.css" />
+    <None Remove="Components\Header\Header.razor.css" />
+    <None Remove="Components\Header\ProductCart.razor.css" />
     <None Remove="Components\ProductCard.razor.css" />
+    <None Remove="Pages\Checkout\index.razor.css" />
+    <None Remove="Pages\ProductPage\ProductPage.razor.css" />
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="Components\Checkout\ProductList.razor.css" />
+    <Content Include="Components\Checkout\Total.razor.css" />
+    <Content Include="Components\Header\Header.razor.css" />
+    <Content Include="Components\Header\ProductCart.razor.css" />
     <Content Include="Components\ProductCard.razor.css" />
+    <Content Include="Pages\Checkout\index.razor.css" />
+    <Content Include="Pages\ProductPage\ProductPage.razor.css" />
     <Watch Include="*\*.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Watch Remove="Components\Checkout\ProductList.razor.css" />
+    <Watch Remove="Components\Checkout\Total.razor.css" />
+    <Watch Remove="Components\Header\Header.razor.css" />
+    <Watch Remove="Components\Header\ProductCart.razor.css" />
+    <Watch Remove="Pages\Checkout\index.razor.css" />
+    <Watch Remove="Pages\ProductPage\ProductPage.razor.css" />
   </ItemGroup>
 
   <ItemGroup>
@@ -26,11 +47,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Shared\WebApplication1.Shared.csproj" />
+    <Folder Include="wwwroot\images\productImages\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\images\productImages\" />
+    <ProjectReference Include="..\Shared\WebApplication1.Shared.csproj" />
   </ItemGroup>
 
 </Project>
