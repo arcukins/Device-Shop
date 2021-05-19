@@ -1,0 +1,36 @@
+C:\Users\SW Dev\source\repos\WebApplication1\WebApplication1.Data\bin\Debug\net5.0\WebApplication1.Data.deps.json
+C:\Users\SW Dev\source\repos\WebApplication1\WebApplication1.Data\bin\Debug\net5.0\WebApplication1.Data.runtimeconfig.json
+C:\Users\SW Dev\source\repos\WebApplication1\WebApplication1.Data\bin\Debug\net5.0\WebApplication1.Data.runtimeconfig.dev.json
+C:\Users\SW Dev\source\repos\WebApplication1\WebApplication1.Data\bin\Debug\net5.0\WebApplication1.Data.dll
+C:\Users\SW Dev\source\repos\WebApplication1\WebApplication1.Data\bin\Debug\net5.0\ref\WebApplication1.Data.dll
+C:\Users\SW Dev\source\repos\WebApplication1\WebApplication1.Data\bin\Debug\net5.0\WebApplication1.Data.pdb
+C:\Users\SW Dev\source\repos\WebApplication1\WebApplication1.Data\obj\Debug\net5.0\WebApplication1.Data.csprojAssemblyReference.cache
+C:\Users\SW Dev\source\repos\WebApplication1\WebApplication1.Data\obj\Debug\net5.0\WebApplication1.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\SW Dev\source\repos\WebApplication1\WebApplication1.Data\obj\Debug\net5.0\WebApplication1.Data.AssemblyInfoInputs.cache
+C:\Users\SW Dev\source\repos\WebApplication1\WebApplication1.Data\obj\Debug\net5.0\WebApplication1.Data.AssemblyInfo.cs
+C:\Users\SW Dev\source\repos\WebApplication1\WebApplication1.Data\obj\Debug\net5.0\WebApplication1.Data.csproj.CoreCompileInputs.cache
+C:\Users\SW Dev\source\repos\WebApplication1\WebApplication1.Data\obj\Debug\net5.0\WebApplication1.Data.dll
+C:\Users\SW Dev\source\repos\WebApplication1\WebApplication1.Data\obj\Debug\net5.0\ref\WebApplication1.Data.dll
+C:\Users\SW Dev\source\repos\WebApplication1\WebApplication1.Data\obj\Debug\net5.0\WebApplication1.Data.pdb
+C:\Users\SW Dev\source\repos\WebApplication1\WebApplication1.Data\obj\Debug\net5.0\WebApplication1.Data.genruntimeconfig.cache
+C:\Users\SW Dev\source\repos\WebApplication1\WebApplication1.Data\bin\Debug\net5.0\WebApplication1.Shared.dll
+C:\Users\SW Dev\source\repos\WebApplication1\WebApplication1.Data\bin\Debug\net5.0\WebApplication1.Shared.pdb
+C:\Users\SW Dev\source\repos\WebApplication1\WebApplication1.Data\obj\Debug\net5.0\WebApplication1.Data.csproj.CopyComplete
+C:\Users\Smartkey\Documents\Device-Shop\WebApplication1.Data\bin\Debug\net5.0\WebApplication1.Data.deps.json
+C:\Users\Smartkey\Documents\Device-Shop\WebApplication1.Data\bin\Debug\net5.0\WebApplication1.Data.runtimeconfig.json
+C:\Users\Smartkey\Documents\Device-Shop\WebApplication1.Data\bin\Debug\net5.0\WebApplication1.Data.runtimeconfig.dev.json
+C:\Users\Smartkey\Documents\Device-Shop\WebApplication1.Data\bin\Debug\net5.0\WebApplication1.Data.dll
+C:\Users\Smartkey\Documents\Device-Shop\WebApplication1.Data\bin\Debug\net5.0\ref\WebApplication1.Data.dll
+C:\Users\Smartkey\Documents\Device-Shop\WebApplication1.Data\bin\Debug\net5.0\WebApplication1.Data.pdb
+C:\Users\Smartkey\Documents\Device-Shop\WebApplication1.Data\bin\Debug\net5.0\WebApplication1.Shared.dll
+C:\Users\Smartkey\Documents\Device-Shop\WebApplication1.Data\bin\Debug\net5.0\WebApplication1.Shared.pdb
+C:\Users\Smartkey\Documents\Device-Shop\WebApplication1.Data\obj\Debug\net5.0\WebApplication1.Data.csprojAssemblyReference.cache
+C:\Users\Smartkey\Documents\Device-Shop\WebApplication1.Data\obj\Debug\net5.0\WebApplication1.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Smartkey\Documents\Device-Shop\WebApplication1.Data\obj\Debug\net5.0\WebApplication1.Data.AssemblyInfoInputs.cache
+C:\Users\Smartkey\Documents\Device-Shop\WebApplication1.Data\obj\Debug\net5.0\WebApplication1.Data.AssemblyInfo.cs
+C:\Users\Smartkey\Documents\Device-Shop\WebApplication1.Data\obj\Debug\net5.0\WebApplication1.Data.csproj.CoreCompileInputs.cache
+C:\Users\Smartkey\Documents\Device-Shop\WebApplication1.Data\obj\Debug\net5.0\WebApplication1.Data.csproj.CopyComplete
+C:\Users\Smartkey\Documents\Device-Shop\WebApplication1.Data\obj\Debug\net5.0\WebApplication1.Data.dll
+C:\Users\Smartkey\Documents\Device-Shop\WebApplication1.Data\obj\Debug\net5.0\ref\WebApplication1.Data.dll
+C:\Users\Smartkey\Documents\Device-Shop\WebApplication1.Data\obj\Debug\net5.0\WebApplication1.Data.pdb
+C:\Users\Smartkey\Documents\Device-Shop\WebApplication1.Data\obj\Debug\net5.0\WebApplication1.Data.genruntimeconfig.cache

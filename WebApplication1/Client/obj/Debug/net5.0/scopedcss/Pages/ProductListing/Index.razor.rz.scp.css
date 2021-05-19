@@ -1,0 +1,6 @@
+.productListing[b-x42z1sd1x9] {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-gap: 20px;
+    grid-auto-rows: 1fr;
+}

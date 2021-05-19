@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\Smartkey\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Smartkey\\.nuget\\packages"
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+.checkout-item img[b-vw1dz71tou] {
+    width: 20%;
+    height: auto;
+}
+
+.checkout-item[b-vw1dz71tou] {
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border-bottom: 1px solid black;
+}

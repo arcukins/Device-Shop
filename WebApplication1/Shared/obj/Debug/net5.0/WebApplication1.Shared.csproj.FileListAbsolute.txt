@@ -1,0 +1,24 @@
+C:\Users\SW Dev\source\repos\WebApplication1\WebApplication1\Shared\bin\Debug\net5.0\WebApplication1.Shared.deps.json
+C:\Users\SW Dev\source\repos\WebApplication1\WebApplication1\Shared\bin\Debug\net5.0\WebApplication1.Shared.dll
+C:\Users\SW Dev\source\repos\WebApplication1\WebApplication1\Shared\bin\Debug\net5.0\ref\WebApplication1.Shared.dll
+C:\Users\SW Dev\source\repos\WebApplication1\WebApplication1\Shared\bin\Debug\net5.0\WebApplication1.Shared.pdb
+C:\Users\SW Dev\source\repos\WebApplication1\WebApplication1\Shared\obj\Debug\net5.0\WebApplication1.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\SW Dev\source\repos\WebApplication1\WebApplication1\Shared\obj\Debug\net5.0\WebApplication1.Shared.AssemblyInfoInputs.cache
+C:\Users\SW Dev\source\repos\WebApplication1\WebApplication1\Shared\obj\Debug\net5.0\WebApplication1.Shared.AssemblyInfo.cs
+C:\Users\SW Dev\source\repos\WebApplication1\WebApplication1\Shared\obj\Debug\net5.0\WebApplication1.Shared.csproj.CoreCompileInputs.cache
+C:\Users\SW Dev\source\repos\WebApplication1\WebApplication1\Shared\obj\Debug\net5.0\WebApplication1.Shared.dll
+C:\Users\SW Dev\source\repos\WebApplication1\WebApplication1\Shared\obj\Debug\net5.0\ref\WebApplication1.Shared.dll
+C:\Users\SW Dev\source\repos\WebApplication1\WebApplication1\Shared\obj\Debug\net5.0\WebApplication1.Shared.pdb
+C:\Users\SW Dev\source\repos\WebApplication1\WebApplication1\Shared\obj\Debug\net5.0\WebApplication1.Shared.csprojAssemblyReference.cache
+C:\Users\Smartkey\Documents\Device-Shop\WebApplication1\Shared\bin\Debug\net5.0\WebApplication1.Shared.deps.json
+C:\Users\Smartkey\Documents\Device-Shop\WebApplication1\Shared\bin\Debug\net5.0\WebApplication1.Shared.dll
+C:\Users\Smartkey\Documents\Device-Shop\WebApplication1\Shared\bin\Debug\net5.0\ref\WebApplication1.Shared.dll
+C:\Users\Smartkey\Documents\Device-Shop\WebApplication1\Shared\bin\Debug\net5.0\WebApplication1.Shared.pdb
+C:\Users\Smartkey\Documents\Device-Shop\WebApplication1\Shared\obj\Debug\net5.0\WebApplication1.Shared.csprojAssemblyReference.cache
+C:\Users\Smartkey\Documents\Device-Shop\WebApplication1\Shared\obj\Debug\net5.0\WebApplication1.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Smartkey\Documents\Device-Shop\WebApplication1\Shared\obj\Debug\net5.0\WebApplication1.Shared.AssemblyInfoInputs.cache
+C:\Users\Smartkey\Documents\Device-Shop\WebApplication1\Shared\obj\Debug\net5.0\WebApplication1.Shared.AssemblyInfo.cs
+C:\Users\Smartkey\Documents\Device-Shop\WebApplication1\Shared\obj\Debug\net5.0\WebApplication1.Shared.csproj.CoreCompileInputs.cache
+C:\Users\Smartkey\Documents\Device-Shop\WebApplication1\Shared\obj\Debug\net5.0\WebApplication1.Shared.dll
+C:\Users\Smartkey\Documents\Device-Shop\WebApplication1\Shared\obj\Debug\net5.0\ref\WebApplication1.Shared.dll
+C:\Users\Smartkey\Documents\Device-Shop\WebApplication1\Shared\obj\Debug\net5.0\WebApplication1.Shared.pdb

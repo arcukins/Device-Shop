@@ -1,0 +1,33 @@
+li[b-qhdagfz3de] {
+    display: flex;
+    list-style: none;
+    border-bottom: 1px solid black;
+}
+.list_img[b-qhdagfz3de] {
+    width: 26%;
+}
+
+.list_img img[b-qhdagfz3de] {
+    width: 100%;
+}
+
+.list_desc[b-qhdagfz3de] {
+    float: left;
+    width: 50%;
+}
+
+.list_desc h4 a[b-qhdagfz3de] {
+    color: #000;
+    font-size: 0.6em;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.list_desc h4 a:hover[b-qhdagfz3de] {
+    color: red;
+}
+
+h4[b-qhdagfz3de] {
+    margin: 0;
+    line-height: 0.5
+}

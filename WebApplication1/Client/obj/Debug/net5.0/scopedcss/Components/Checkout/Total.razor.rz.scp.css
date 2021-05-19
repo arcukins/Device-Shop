@@ -1,0 +1,11 @@
+.total[b-13chwo7qjc] {
+    width: 100%;
+    border-top: 1px solid black;
+    padding: 15px;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 15px;
+    font-size: 1.5rem;
+    margin-bottom: .5rem;
+    line-height: 1.2;
+}
